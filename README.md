@@ -1,6 +1,6 @@
 # TRON Project Stealer
- Information stealer
- 
+Information stealer
+
 ############# [TRON Project v1.4] #############
 --Grabber passwords/cookies/forms/cards from Chromium-based browsers
 --Grabber passwords files/cookies/forms from Gecko-based browsers
