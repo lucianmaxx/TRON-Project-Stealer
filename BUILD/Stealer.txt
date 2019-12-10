@@ -295,7 +295,7 @@ namespace TRONRANDOM_NAME
 
         static void TRON_Info()
         {
-            // Этот метод собирает инфу без WMI
+            
             string info = null;
             try
             {
@@ -332,6 +332,7 @@ namespace TRONRANDOM_NAME
 
         static void TRON_Info_less()
         {
+			// Этот метод собирает инфу без WMI
             string info = null;
             try
             {
