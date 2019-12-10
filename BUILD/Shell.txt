@@ -6,6 +6,7 @@ namespace s1
 {
     class Program
     {
+        // Дабы крипторы не жаловались на обфускацию, обернем в еще одну оболочку
         static void Main(string[] args)
         {
             try

