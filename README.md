@@ -1,4 +1,4 @@
-# TRON-Project-Stealer
+# TRON Project Stealer
 Information stealer
 
 https://telegra.ph/Pishem-stiller-na-C-TRON-Source-12-09
